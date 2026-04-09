@@ -1,0 +1,22 @@
+<!doctype html>
+<head>
+    <title>
+        web designing MT 1 practical
+    </title>
+</head>
+<body>
+    <input type="number" input id="numinput" placeholder="enter your number">
+    <button onclick="generatetable()">GENERATE TABLE</button>
+<div id="table"></div>
+<script>
+    function generatetable() {
+        const num = parseInt(document.getElementById('numinput').value);
+        let table='<h2>multiplication table for' + num +'/h2';
+           for(let i=1; i<=10; i++){
+            table += '<li>' + num + ' x ' + i + ' = ' + (num * i) + '</li>';
+        }
+ document.getElementById('table').innerHTML = table;
+    }
+</script>   
+</body>
+</html> 
